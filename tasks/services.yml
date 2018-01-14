@@ -2,7 +2,5 @@
 
 - name: services > Services
   service:
-    name:  "{{ item }}"
+    name:  "{{ elao_oauth2_proxy_name | default('oauth2-proxy') }}"
     state: started
-  with_items:
-    - oauth2-proxy
